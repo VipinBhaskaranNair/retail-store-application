@@ -83,7 +83,6 @@ class DiscountedShoppingCartControllerTest {
 	@Test
 	void testCalculteDiscountedInvoice() throws Exception{
 		shoppingCart = new ShoppingCart("C001", customerDetails, LocalDateTime.of(2024, 06, 16, 3, 15), cartItems);
-		System.out.println(mapper.writeValueAsString(shoppingCart));
 		ResultActions response = mockMvc.perform(post("/api/discountedInvoice").contentType(MediaType.APPLICATION_JSON)
 				.content(mapper.writeValueAsString(shoppingCart)));
 		response.andExpect(MockMvcResultMatchers.status().isOk());
@@ -93,7 +92,6 @@ class DiscountedShoppingCartControllerTest {
 	void testCalculteDiscountedInvoiceInvalidCustomerType() throws Exception{
 		customerDetails = new CustomerDetails("CU001", "Tom", null, LocalDateTime.of(2018, 1, 22, 3, 15));
 		shoppingCart = new ShoppingCart("C001", customerDetails, LocalDateTime.of(2024, 06, 16, 3, 15), cartItems);
-		System.out.println(mapper.writeValueAsString(shoppingCart));
 		ResultActions response = mockMvc.perform(post("/api/discountedInvoice").contentType(MediaType.APPLICATION_JSON)
 				.content(mapper.writeValueAsString(shoppingCart)));
 		response.andExpect(MockMvcResultMatchers.status().isBadRequest());
