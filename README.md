@@ -112,3 +112,19 @@ JaCoCo is used for generating coverage report. Please follow below steps for gen
 
 1) On running 'mvn clean install' will build, run tests and generate jacoco.exec file
 2) On running 'mvn jacoco:report' will generates report in html file under target/site/jacoco directory.
+
+
+################################
+Script files
+################################
+Script files are present in artifacts folder
+
+################################
+UML Diagram
+################################
+UML diagram is present in artifacts/UML folder
+
+################################
+Sonar Report
+################################
+Sonar Report is present in artifacts/Sonar folder
