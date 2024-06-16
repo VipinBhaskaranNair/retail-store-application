@@ -13,6 +13,19 @@ On a retail website, the following discounts apply:
 Write a program in a Java – Spring boot with test cases such that given a bill, it finds the net payable amount. 
 
 ############################
+Assumptions & Presumptions
+############################
+1) Database part is not included in code to keep the implementation simple and concentrate more on the problem statement.
+2) User interface will be able to call the REST endpoint with the required details(Customer details, product information).
+3) Discount percentages are externalised to property file
+4) Bean validation is implemented for all required fields
+5) Sonar report is generated from a server configured in local
+6) Server port is changed to 8091
+
+
+
+
+############################
 Solution
 ############################
 A Springboot java project is created which exposes an endpoint which will accept the shopping cart details as JSON request and returns the discounted invoice with discounted amount.
