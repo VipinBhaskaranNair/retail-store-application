@@ -92,10 +92,10 @@ Sample Response:
 
 
 ################################
-Coverage Report
+Build and Coverage Report
 ################################
 
 JaCoCo is used for generating coverage report. Please follow below steps for generating report.
 
-1) On running mvn clean install will build, run tests and generate jacoco.exec file
-2) On running mvn jacoco:report will generates report in html file under target/site/jacoco directory.
+1) On running 'mvn clean install' will build, run tests and generate jacoco.exec file
+2) On running 'mvn jacoco:report' will generates report in html file under target/site/jacoco directory.
