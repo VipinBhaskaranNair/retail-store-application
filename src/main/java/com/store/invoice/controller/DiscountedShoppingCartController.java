@@ -21,12 +21,9 @@ public class DiscountedShoppingCartController {
 	
 	Logger logger = LoggerFactory.getLogger(DiscountedShoppingCartController.class);
 
+	@Autowired
 	private DiscountedShoppingCartService discountedShoppingCartService;
 	
-	@Autowired
-    public DiscountedShoppingCartController(DiscountedShoppingCartService discountedShoppingCartService) {
-        this.discountedShoppingCartService = discountedShoppingCartService;
-    }
 
 	@PostMapping("/discountedInvoice")
 	public DiscountedShoppingCart calculteDiscountedInvoice(@RequestBody @Valid ShoppingCart shoppingCart) throws InvalidCustomerTypeException{
